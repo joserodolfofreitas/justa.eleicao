@@ -65,7 +65,7 @@ describe('Majority Decision Test', function() {
 
     it('should be close to the majority decision', function(done) {
         //100000000
-        var maxVotes = 1000;
+        var maxVotes = 10000;
 
         var simulateVote = function(currentVote, maxVotes) {
             var candidates = getCandidatesFromPool();
