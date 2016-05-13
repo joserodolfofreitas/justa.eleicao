@@ -40,6 +40,9 @@ var getCandidatesForPriority = function(priority) { //priority one to five
 var getCandidatesFromPool = function() {
     var candidates = [];
     for (var i = 1; i <= 5; i++) {
+        do {
+            var candidate = getCandidatesForPriority(i);
+        } while (candidates.indexOf(candidate) != -1);
         candidates.push(getCandidatesForPriority(i));
     }
     return candidates;
@@ -62,7 +65,7 @@ describe('Majority Decision Test', function() {
 
     it('should be close to the majority decision', function(done) {
         //100000000
-        var maxVotes = 100000000;
+        var maxVotes = 1000;
 
         var simulateVote = function(currentVote, maxVotes) {
             var candidates = getCandidatesFromPool();
@@ -76,6 +79,9 @@ describe('Majority Decision Test', function() {
                         simulateVote(++currentVote, maxVotes);
                     });
                 } else {
+                    voteBox.getElectionResult(function(err, result) {
+                       console.log(result);
+                    });
                     done();
                 }
             });
