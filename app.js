@@ -19,6 +19,8 @@ app.post('/vote', function(req, res) {
     });
 });
 
-app.listen(8080, function() {
-    console.log('listening on port 3000')
+var port = process.env.OPENSHIFT_NODEJS_PORT  || 8080;
+
+app.listen(port, function() {
+    console.log('listening on port ' + port)
 });
