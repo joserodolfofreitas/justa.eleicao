@@ -9,6 +9,8 @@
   "author": "@joserodolfo_f",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
     "mocha": "^2.4.5",
     "redis": "^2.6.0-2"
   }
