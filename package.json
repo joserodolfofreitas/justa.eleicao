@@ -6,12 +6,15 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joserodolfofreitas/justa.eleicao"
+  },
   "author": "@joserodolfo_f",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
-    "mocha": "^2.4.5",
-    "redis": "^2.6.0-2"
+    "mocha": "^2.4.5"
   }
 }
